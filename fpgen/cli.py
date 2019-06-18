@@ -27,7 +27,8 @@ def main():
         os.makedirs(projectName + "/app/templates")
 
         print("\nCreated files:")
-        with open('file_templates.json') as jsonFile:
+        dirPath = os.path.dirname(os.path.realpath(__file__))
+        with open(f'{dirPath}/file_templates.json') as jsonFile:
             file = json.load(jsonFile)
             for key, value in file.items():
                 touch(projectName + key)
@@ -35,7 +36,7 @@ def main():
 
         # Insert template code
         print("\nLoading in template data....")
-        with open('file_templates.json') as jsonFile:
+        with open(f'{dirPath}/file_templates.json') as jsonFile:
             file = json.load(jsonFile)
             for key, value in file.items():
                 with open(projectName + key, 'w') as outputFile:

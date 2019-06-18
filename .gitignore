@@ -1,0 +1,3 @@
+*.egg-info
+*.pyc
+fpgen/__pycache__/
