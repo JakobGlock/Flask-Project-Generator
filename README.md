@@ -4,7 +4,7 @@ A basic script to generate a template Flask project, this has been created for m
 
 This has been created with the intention of using a database with flask project, so you will need to install some kind of database, I use MYSQL and this project has been created with this intention.
 
-# Running
+# Running on Linux
 
 Make sure the main.py script is executable:
 
@@ -16,4 +16,4 @@ Then run the script, remember to provide the project name as an argument:
 
 # Tested
 
-I have only tested this on Linux, Ubuntu 18 to be more precise.
+I have only tested this on Linux.
