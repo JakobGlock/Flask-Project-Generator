@@ -4,6 +4,7 @@ A quick and dirty CLI-tool to generate a template Flask project, this has been c
 
 Once installed and run, it will create the following folder structure and files:
 
+```
 my_flask_project/
 ├── app
 │   ├── __init__.py
@@ -16,6 +17,7 @@ my_flask_project/
 ├── requirements.txt
 ├── run.py
 └── venv
+```
 
 This will setup a python virtual environment and install the required packages for the project.
 
