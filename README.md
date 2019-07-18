@@ -58,7 +58,7 @@ I have only tested this on Linux.
 
 # Dependencies
 
-Here is a list of the packages used within this project, this is a dump of the `requirements.txt` file:
+Here is a list of the packages used within the created project, this is a dump of the `requirements.txt` file that is created:
 
 ```
 Click==7.0
