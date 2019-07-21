@@ -1,12 +1,13 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
 setup(
     name='fpgen',
     version='0.1',
-    py_modules=['fpgen'],
+    packages=find_packages('fpgen'),
     install_requires=[],
-    entry_points='''
-        [console_scripts]
-        fpgen=fpgen.cli:main
-    ''',
+    entry_points={
+        'console_scripts': [
+            'fpgen = fpgen.cli:main',
+        ],
+    }
 )
