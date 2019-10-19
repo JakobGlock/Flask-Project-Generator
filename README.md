@@ -70,7 +70,6 @@ Jinja2==2.10.1
 MarkupSafe==1.1.1
 marshmallow==2.19.2
 marshmallow-sqlalchemy==0.16.3
-pkg-resources==0.0.0
 PyMySQL==0.9.3
 six==1.12.0
 SQLAlchemy==1.3.4
