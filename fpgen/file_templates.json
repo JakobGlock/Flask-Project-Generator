@@ -5,6 +5,6 @@
   "/app/routes.py": "from app import app as application\nfrom flask import render_template\nfrom app import models\n\n@application.route('/')\ndef index():\n\tdata = 'Hello World!'\n\treturn render_template('index.html', data=data)",
   "/app/models.py": "from datetime import datetime\nfrom app import db, ma\n\nclass User(db.Model):\n\tid = db.Column(db.Integer, primary_key=True)\n\tdate = db.Column(db.DateTime, default=datetime.utcnow())\n\tusername = db.Column(db.String(80), unique=True)\n\n\tdef __init__(self, username):\n\t\tself.username = username\n\n\tdef __repr__(self):\n\t\treturn '<User %r>' % self.username\n\nclass UserSchema(ma.ModelSchema):\n\tclass Meta:\n\t\tmodel = User\n\ndb.create_all()\ndb.session.commit()",
   "/app/templates/index.html": "<h1>{{ data }}</h1>",
-  "/requirements.txt": "Click==7.0\nFlask==1.0.3\nflask-marshmallow==0.10.1\nFlask-SQLAlchemy==2.4.0\nitsdangerous==1.1.0\nJinja2==2.10.1\nMarkupSafe==1.1.1\nmarshmallow==2.19.2\nmarshmallow-sqlalchemy==0.16.3\npkg-resources==0.0.0\nPyMySQL==0.9.3\nsix==1.12.0\nSQLAlchemy==1.3.4\nWerkzeug==0.15.4"
+  "/requirements.txt": "Click==7.0\nFlask==1.0.3\nflask-marshmallow==0.10.1\nFlask-SQLAlchemy==2.4.0\nitsdangerous==1.1.0\nJinja2==2.10.1\nMarkupSafe==1.1.1\nmarshmallow==2.19.2\nmarshmallow-sqlalchemy==0.16.3\nPyMySQL==0.9.3\nsix==1.12.0\nSQLAlchemy==1.3.4\nWerkzeug==0.15.4"
 
 }
