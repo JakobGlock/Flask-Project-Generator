@@ -5,10 +5,12 @@ import argparse
 import json
 import subprocess
 
+
 # Helpers
 def touch(path):
     with open(path, 'a'):
         os.utime(path, None)
+
 
 def main():
 
@@ -48,12 +50,20 @@ def main():
         print("VENV created\n")
 
         print("Installing packages with pip3....\n")
-        subprocess.call([f"{projectName}/venv/bin/python3", "-m", "pip", "install", "-r", f"{projectName}/requirements.txt"])
+        subprocess.call([
+                f"{projectName}/venv/bin/python3",
+                "-m",
+                "pip",
+                "install",
+                "-r",
+                f"{projectName}/requirements.txt"
+        ])
         print("\n....Pip3 install done")
 
         print("\nProject setup complete\n\nGo to the project folder and activate the venv using:\n\tsource venv/bin/activate\n\nThen run the follwing command to start the server:\n\tpython3 run.py\n\nDont forget to setup a database and put in the correct credentials in to __init__.py\n\nHave fun\n\n:)")
     else:
         print("Project folder already exists")
+
 
 if __name__ == '__main__':
     main()
